@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "id": "fasthopper",
+  "version": "${version}",
+  "name": "Fasthopper",
+  "description": "",
+  "authors": [],
+  "contact": {},
+  "license": "MIT",
+  "environment": "*",
+  "entrypoints": {
+    "client": [
+      "de.laura.fasthopper.client.FasthopperClient"
+    ],
+    "main": [
+      "de.laura.fasthopper.Fasthopper"
+    ]
+  },
+  "mixins": [
+    "fasthopper.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.14.9",
+    "fabric": "*",
+    "minecraft": "1.19.4"
+  }
+}
