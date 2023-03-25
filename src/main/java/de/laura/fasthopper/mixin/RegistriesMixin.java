@@ -18,7 +18,7 @@ public class RegistriesMixin {
 
         for (Registry<?> objects : Registries.REGISTRIES) {
             try {
-                ((Registry<?>) objects).freeze();
+                objects.freeze();
             } catch (IllegalStateException ignored) {}
         }
 

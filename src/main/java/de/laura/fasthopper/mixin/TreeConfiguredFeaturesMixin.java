@@ -14,10 +14,6 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
 @Mixin(TreeConfiguredFeatures.class)
 public class TreeConfiguredFeaturesMixin {
-    @Mutable
-    @Final
-    @Shadow
-    public static RegistryKey<ConfiguredFeature<TreeFeatureConfig, ?>> OAK;
 
     @Inject(method = "oak", at = @At("HEAD"), cancellable = true)
     private static void injected(CallbackInfoReturnable<Builder> cir) {

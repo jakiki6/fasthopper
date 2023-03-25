@@ -6,7 +6,8 @@
   "description": "",
   "authors": [],
   "contact": {},
-  "license": "MIT",
+  "license": "GPLv2",
+  "icon": "assets/modid/icon.png",
   "environment": "*",
   "entrypoints": {
     "client": [
