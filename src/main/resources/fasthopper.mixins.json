@@ -25,6 +25,7 @@
     "ScreenHandlerMixin",
     "SharedConstantsMixin",
     "SixWayEntryMixin",
+    "SpongeBlockMixin",
     "ThreadExecutorMixin",
     "TreeConfiguredFeaturesMixin"
   ],
