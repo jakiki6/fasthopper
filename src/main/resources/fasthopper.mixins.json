@@ -9,6 +9,7 @@
     "BlocksMixin",
     "EnderPearlEntityMixin",
     "HopperBlockEntityMixin",
+    "IronGolemEntityMixin",
     "ItemMixin",
     "ItemStackMixin",
     "MaterialMixin",
@@ -18,6 +19,7 @@
     "NeighborUpdaterMixin",
     "OakSaplingGeneratorMixin",
     "OreVeinSamplerMixin",
+    "PassiveEntityMixin",
     "PistonBlockMixin",
     "PistonHandlerMixin",
     "PistonHeadBlockMixin",
@@ -27,6 +29,7 @@
     "SixWayEntryMixin",
     "SpongeBlockMixin",
     "ThreadExecutorMixin",
+    "TntEntityMixin",
     "TreeConfiguredFeaturesMixin"
   ],
   "client": [
