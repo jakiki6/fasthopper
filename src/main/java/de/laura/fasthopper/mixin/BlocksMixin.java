@@ -26,7 +26,7 @@ public class BlocksMixin {
                 block = new PillarBlock(AbstractBlock.Settings.of(Material.STONE, MapColor.DEEPSLATE_GRAY).requiresTool().strength(1.5F, 6.0F).sounds(BlockSoundGroup.DEEPSLATE));
                 break;
             case "lava":
-                block = new FluidBlock(Fluids.LAVA, AbstractBlock.Settings.of(Material.LAVA).noCollision().ticksRandomly().strength(0.0F).luminance((state) -> 15).dropsNothing());
+                block = new FluidBlock(Fluids.LAVA, AbstractBlock.Settings.of(Material.LAVA).noCollision().ticksRandomly().strength(0.01F).luminance((state) -> 15).dropsNothing());
                 break;
         }
 
