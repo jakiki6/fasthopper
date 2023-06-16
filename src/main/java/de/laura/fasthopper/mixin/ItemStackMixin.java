@@ -27,9 +27,12 @@ public class ItemStackMixin implements FabricItemStack {
             if (size == -1) {
                 size = item.getNbt().getSizeInBytes();
             }
-            ArrayList<Text> list = new ArrayList<>(cir.getReturnValue());
-            list.add(Text.of("Size in bytes: " + size + " (" + (size / 2097000f * 100f) + "%)"));
-            cir.setReturnValue(list);
+
+            if (size > 1024) {
+                ArrayList<Text> list = new ArrayList<>(cir.getReturnValue());
+                list.add(Text.of("Size in bytes: " + size + " (" + (size / 2097000f * 100f) + "%)"));
+                cir.setReturnValue(list);
+            }
         }
     }
 }

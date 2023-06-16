@@ -7,7 +7,7 @@
   "authors": [],
   "contact": {},
   "license": "GPLv2",
-  "icon": "assets/modid/icon.png",
+  "icon": "assets/fasthopper/icon.png",
   "environment": "*",
   "entrypoints": {
     "client": [
@@ -23,6 +23,6 @@
   "depends": {
     "fabricloader": ">=0.14.9",
     "fabric": "*",
-    "minecraft": "1.19.4"
+    "minecraft": "1.20"
   }
 }

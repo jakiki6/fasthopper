@@ -28,18 +28,10 @@ public abstract class EnderPearlEntityMixin extends ThrownItemEntity {
 
         super.onCollision(hitResult);
 
-        for(int i = 0; i < 32; ++i) {
-            this.world.addParticle(ParticleTypes.PORTAL, this.getX(), this.getY() + this.random.nextDouble() * 2.0D, this.getZ(), this.random.nextGaussian(), 0.0D, this.random.nextGaussian());
-        }
-
-        if (!this.world.isClient && !this.isRemoved()) {
+        if (!this.getWorld().isClient() && !this.isRemoved()) {
             Entity entity = this.getOwner();
             if (entity instanceof ServerPlayerEntity serverPlayerEntity) {
                 if (serverPlayerEntity.networkHandler.isConnectionOpen() && !serverPlayerEntity.isSleeping()) {
-                    if (this.world.getRegistryKey().getValue().toString().contains("nether")) {
-                        this.setPos(this.getX() * 8, this.getY(), this.getZ() * 8);
-                    }
-
                     if (entity.hasVehicle()) {
                         serverPlayerEntity.requestTeleportAndDismount(this.getX(), this.getY(), this.getZ());
                     } else {

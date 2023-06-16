@@ -1,5 +1,2 @@
 accessWidener	v1	named
 accessible class net/minecraft/world/block/ChainRestrictedNeighborUpdater$SixWayEntry
-accessible method net/minecraft/block/PistonBlock shouldExtend (Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/util/math/Direction;)Z
-accessible class net/minecraft/world/storage/ChunkStreamVersion$Wrapper
-accessible field net/minecraft/entity/mob/MobVisibilityCache owner Lnet/minecraft/entity/mob/MobEntity;
