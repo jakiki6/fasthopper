@@ -11,6 +11,7 @@
     "NbtStringMixin",
     "NeighborUpdaterMixin",
     "PassiveEntityMixin",
+    "PistonBlockMixin",
     "PistonHeadBlockMixin",
     "RegistriesMixin",
     "ScreenHandlerMixin",
