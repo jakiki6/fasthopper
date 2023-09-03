@@ -16,5 +16,4 @@ public class PistonBlockMixin extends FacingBlock {
     private static Comparable<?> patchPiston(BlockState instance, Property<?> property) {
         return false;
     }
-
 }

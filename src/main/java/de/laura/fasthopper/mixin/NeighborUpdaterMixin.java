@@ -13,11 +13,11 @@ import org.spongepowered.asm.mixin.injection.callback.LocalCapture;
 
 @Mixin(NeighborUpdater.class)
 public interface NeighborUpdaterMixin {
-    @Inject(method = "tryNeighborUpdate", at = @At(value = "INVOKE", target = "Lnet/minecraft/util/crash/CrashReport;create(Ljava/lang/Throwable;Ljava/lang/String;)Lnet/minecraft/util/crash/CrashReport;"), locals = LocalCapture.CAPTURE_FAILHARD)
+    /*@Inject(method = "tryNeighborUpdate", at = @At(value = "INVOKE", target = "Lnet/minecraft/util/crash/CrashReport;create(Ljava/lang/Throwable;Ljava/lang/String;)Lnet/minecraft/util/crash/CrashReport;"), locals = LocalCapture.CAPTURE_FAILHARD)
     private static void updateSuppressionCrashFix(World world, BlockState state, BlockPos pos, Block sourceBlock, BlockPos sourcePos, boolean notify, CallbackInfo ci, Throwable throwable) throws Exception {
         if (throwable instanceof Exception e) throw e;
         if (throwable instanceof StackOverflowError e) {
             throw new Exception("Update suppression", e);
         }
-    }
+    }*/
 }

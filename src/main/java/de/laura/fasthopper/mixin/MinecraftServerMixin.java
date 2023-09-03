@@ -29,6 +29,8 @@ public class MinecraftServerMixin {
     private void updateSuppressionCrashFix(ServerWorld serverWorld, BooleanSupplier shouldKeepTicking) {
         try {
             serverWorld.tick(shouldKeepTicking);
-        } catch (Throwable e) {}
+        } catch (Throwable e) {
+            e.printStackTrace();
+        }
     }
 }
