@@ -16,15 +16,15 @@ public class CommandManagerMixin {
 
     @Inject(method = "<init>", at = @At("TAIL"))
     private void addDebuggingCommands(CommandManager.RegistrationEnvironment environment, CommandRegistryAccess commandRegistryAccess, CallbackInfo ci) {
-        ChaseCommand.register(this.dispatcher);
+//        ChaseCommand.register(this.dispatcher);
         DebugMobSpawningCommand.register(this.dispatcher);
-        DebugPathCommand.register(this.dispatcher);
-        JfrCommand.register(this.dispatcher);
-        PublishCommand.register(this.dispatcher);
+//        DebugPathCommand.register(this.dispatcher);
+//       JfrCommand.register(this.dispatcher);
+//        PublishCommand.register(this.dispatcher);
         RaidCommand.register(this.dispatcher);
         ResetChunksCommand.register(this.dispatcher);
         SpawnArmorTrimsCommand.register(this.dispatcher);
-        TestCommand.register(this.dispatcher);
+//        TestCommand.register(this.dispatcher);
         WardenSpawnTrackerCommand.register(this.dispatcher);
     }
 }

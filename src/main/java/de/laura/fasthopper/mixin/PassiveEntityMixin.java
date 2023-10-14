@@ -9,6 +9,6 @@ import org.spongepowered.asm.mixin.injection.ModifyVariable;
 public class PassiveEntityMixin {
     @ModifyVariable(method = "setBreedingAge", at = @At("HEAD"), ordinal = 0, argsOnly = true)
     private int modify(int x) {
-        return 1;
+        return 25;
     }
 }
