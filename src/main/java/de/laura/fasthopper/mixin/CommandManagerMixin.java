@@ -10,6 +10,8 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
+import java.util.Objects;
+
 @Mixin(CommandManager.class)
 public class CommandManagerMixin {
     @Shadow @Final private CommandDispatcher<ServerCommandSource> dispatcher;
@@ -26,5 +28,10 @@ public class CommandManagerMixin {
         SpawnArmorTrimsCommand.register(this.dispatcher);
 //        TestCommand.register(this.dispatcher);
         WardenSpawnTrackerCommand.register(this.dispatcher);
+
+        this.dispatcher.register(CommandManager.literal("s").executes(context -> {
+            Objects.requireNonNull(context.getSource().getPlayer()).kill();
+            return 1;
+        }));
     }
 }

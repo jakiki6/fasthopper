@@ -32,6 +32,8 @@ public abstract class EnderPearlEntityMixin extends ThrownItemEntity {
             Entity entity = this.getOwner();
             if (entity instanceof ServerPlayerEntity serverPlayerEntity) {
                 if (serverPlayerEntity.networkHandler.isConnectionOpen() && !serverPlayerEntity.isSleeping()) {
+                    serverPlayerEntity.teleport((ServerWorld) this.getWorld(), this.getX(), this.getY(), this.getZ(), serverPlayerEntity.getYaw(), serverPlayerEntity.getPitch());
+
                     if (entity.hasVehicle()) {
                         serverPlayerEntity.requestTeleportAndDismount(this.getX(), this.getY(), this.getZ());
                     } else {

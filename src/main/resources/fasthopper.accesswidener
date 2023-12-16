@@ -1,2 +1,3 @@
 accessWidener	v1	named
 accessible class net/minecraft/world/block/ChainRestrictedNeighborUpdater$SixWayEntry
+accessible method net/minecraft/server/world/ServerLightingProvider updateChunkStatus (Lnet/minecraft/util/math/ChunkPos;)V
